@@ -12,7 +12,7 @@ public class Main {
 
 		PatientService patientService = new PatientServiceImpl();
 
-		Map<Integer, PatientDTO> map = patientService.getAll();
+		Map<String, PatientDTO> map = patientService.getAll();
 		
 		System.out.println(map);
 	}

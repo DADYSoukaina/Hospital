@@ -16,8 +16,8 @@ public class StaticDatabase {
 	public static Map<String, Object> getGenericMap(String key) {
 
 		switch (key) {
-		case "Patient":
-			return getPatientList();
+//		case "Patient":
+//			return getPatientList();
 //		case "Disease":
 //			return getPatientList();
 //		case "Appointment":
@@ -86,10 +86,10 @@ public class StaticDatabase {
 	/**
 	 * @return the patientList
 	 */
-	public static Map<String, Object> getPatientList() {
+	public static Map<String, Patient> getPatientList() {
 
 		List<Patient> patientList = new ArrayList<>();
-		Map<String, Object> map = new HashMap<>();
+		Map<String, Patient> map = new HashMap<>();
 
 		Patient patient = new Patient();
 

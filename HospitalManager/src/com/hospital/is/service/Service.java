@@ -6,7 +6,7 @@ public interface Service<T> {
 	
 	T create(T t);
 
-	Map<Integer ,T> getAll();
+	Map<String ,T> getAll();
 
 	T getById(long id);
 

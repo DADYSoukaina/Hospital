@@ -5,7 +5,7 @@ import com.hospital.is.model.PatientDTO;
 
 public class PatientConverter {
 //covertir un patient en DTO
-	PatientDTO toDTO(Patient patient) {
+	public PatientDTO toDTO(Patient patient) {
 		PatientDTO dto = new PatientDTO();
 
 		dto.setFirstName(patient.getFirstName());
@@ -17,7 +17,7 @@ public class PatientConverter {
 		return dto;
 	}
 
-	Patient toEntity(PatientDTO dto) {
+	public Patient toEntity(PatientDTO dto) {
 		Patient patient = new Patient();
 
 		patient.setFirstName(dto.getFirstName());

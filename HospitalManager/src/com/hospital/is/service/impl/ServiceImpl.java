@@ -12,7 +12,7 @@ public class ServiceImpl<T> implements Service<T> {
 	}
 
 	@Override
-	public Map<Integer, T> getAll() {
+	public Map<String, T> getAll() {
 //		return (Map<Integer, T>) StaticDatabase.getGenericMap(t.getClass().getName());
 		return null;
 	}
