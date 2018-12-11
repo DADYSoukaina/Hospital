@@ -9,14 +9,22 @@ public class PatientConverter {
 		PatientDTO dto = new PatientDTO();
 
 		dto.setFirstName(patient.getFirstName());
+		dto.setLastName(patient.getLastName());
+		dto.setAddress(patient.getAddress());
+		dto.setPhone(patient.getPhone());
+		dto.setBirthDate(patient.getBirthDate());
 
 		return dto;
 	}
 
-	Patient toEntity(PatientDTO patientDto) {
+	Patient toEntity(PatientDTO dto) {
 		Patient patient = new Patient();
 
-		patient.setFirstName(patientDto.getFirstName());
+		patient.setFirstName(dto.getFirstName());
+		patient.setLastName(dto.getLastName());
+		patient.setAddress(dto.getAddress());
+		patient.setPhone(dto.getPhone());
+		patient.setBirthDate(dto.getBirthDate());
 
 		return patient;
 	}
