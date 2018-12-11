@@ -6,23 +6,23 @@ import java.util.Map;
 
 public class Prescription {
 
-	private Map<Integer, Medication> medicationlist;
+	private Map<Integer, Medication> medicationMap;
 	
 	private String descriptionOfUse;
 
 
 	/**
-	 * @return the medicationlist
+	 * @return the medicationMap
 	 */
-	public Map<Integer, Medication> getMedicationlist() {
-		return medicationlist;
+	public Map<Integer, Medication> getMedicationMap() {
+		return medicationMap;
 	}
 
 	/**
-	 * @param medicationlist the medicationlist to set
+	 * @param medicationMap the medicationMap to set
 	 */
-	public void setMedicationlist(Map<Integer, Medication> medicationlist) {
-		this.medicationlist = medicationlist;
+	public void setMedicationMap(Map<Integer, Medication> medicationMap) {
+		this.medicationMap = medicationMap;
 	}
 
 	/**

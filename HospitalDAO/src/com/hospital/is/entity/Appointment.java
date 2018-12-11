@@ -16,7 +16,7 @@ public class Appointment {
 
 	private Patient patient;
 
-	private Map<Integer, Prescription> prescriptionList;
+	private Map<Integer, Prescription> prescriptionMap;
 
 	/**
 	 * @return the dateTimeAppointment
@@ -61,17 +61,17 @@ public class Appointment {
 	}
 
 	/**
-	 * @return the prescriptionList
+	 * @return the prescriptionMap
 	 */
-	public Map<Integer, Prescription> getPrescriptionList() {
-		return prescriptionList;
+	public Map<Integer, Prescription> getPrescriptionMap() {
+		return prescriptionMap;
 	}
 
 	/**
-	 * @param prescriptionList the prescriptionList to set
+	 * @param prescriptionMap the prescriptionMap to set
 	 */
-	public void setPrescriptionList(Map<Integer, Prescription> prescriptionList) {
-		this.prescriptionList = prescriptionList;
+	public void setPrescriptionMap(Map<Integer, Prescription> prescriptionMap) {
+		this.prescriptionMap = prescriptionMap;
 	}
 
 	/**

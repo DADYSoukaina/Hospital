@@ -9,55 +9,55 @@ import java.util.Map;
 
 public class MedicalFolder {
 
-	private Map<Integer, Disease> diseaseList;
+	private Map<Integer, Disease> diseaseMap;
 	
-	private Map<Integer, Prescription> prescriptionList;
+	private Map<Integer, Prescription> prescriptionMap;
 	
-	private Map<Integer, Appointment> appointmentList;
+	private Map<Integer, Appointment> appointmentMap;
 
 
 	/**
-	 * @return the diseaseList
+	 * @return the diseaseMap
 	 */
-	public Map<Integer, Disease> getDiseaseList() {
-		return diseaseList;
+	public Map<Integer, Disease> getDiseaseMap() {
+		return diseaseMap;
 	}
 
 	/**
-	 * @param diseaseList the diseaseList to set
+	 * @param diseaseMap the diseaseMap to set
 	 */
-	public void setDiseaseList(Map<Integer, Disease> diseaseList) {
-		this.diseaseList = diseaseList;
-	}
-	
-
-	/**
-	 * @return the prescriptionList
-	 */
-	public Map<Integer, Prescription> getPrescriptionList() {
-		return prescriptionList;
-	}
-
-	/**
-	 * @param prescriptionList the prescriptionList to set
-	 */
-	public void setPrescriptionList(Map<Integer, Prescription> prescriptionList) {
-		this.prescriptionList = prescriptionList;
+	public void setDiseaseMap(Map<Integer, Disease> diseaseMap) {
+		this.diseaseMap = diseaseMap;
 	}
 	
 
 	/**
-	 * @return the appointmentList
+	 * @return the prescriptionMap
 	 */
-	public Map<Integer, Appointment> getAppointmentList() {
-		return appointmentList;
+	public Map<Integer, Prescription> getPrescriptionMap() {
+		return prescriptionMap;
 	}
 
 	/**
-	 * @param appointmentList the appointmentList to set
+	 * @param prescriptionMap the prescriptionMap to set
 	 */
-	public void setAppointmentList(Map<Integer, Appointment> appointmentList) {
-		this.appointmentList = appointmentList;
+	public void setPrescriptionMap(Map<Integer, Prescription> prescriptionMap) {
+		this.prescriptionMap = prescriptionMap;
+	}
+	
+
+	/**
+	 * @return the appointmentMap
+	 */
+	public Map<Integer, Appointment> getAppointmentMap() {
+		return appointmentMap;
+	}
+
+	/**
+	 * @param appointmentMap the appointmentMap to set
+	 */
+	public void setAppointmentMap(Map<Integer, Appointment> appointmentMap) {
+		this.appointmentMap = appointmentMap;
 	}
 
 	/* (non-Javadoc)
@@ -65,7 +65,7 @@ public class MedicalFolder {
 	 */
 	@Override
 	public String toString() {
-		return "MedicalFolder [diseaseList=" + diseaseList + "]";
+		return "MedicalFolder [diseaseMap=" + diseaseMap + "]";
 	}
 	
 	

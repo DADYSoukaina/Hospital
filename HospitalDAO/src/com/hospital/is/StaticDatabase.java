@@ -60,7 +60,7 @@ public class StaticDatabase {
 		Appointment appointment = new Appointment();
 		appointment.setDateTimeAppointment(null);
 		appointment.setDoctor(new Doctor());
-		appointment.setPrescriptionList(null);
+		appointment.setPrescriptionMap(null);
 		appointment.setTypeAppointment("Consultation");
 
 		appointmentList.put(1, appointment);
@@ -76,7 +76,7 @@ public class StaticDatabase {
 		Map<Integer, MedicalFolder> medicalFolderList = new HashMap<Integer, MedicalFolder>();
 		MedicalFolder medicalFolder = new MedicalFolder();
 
-		medicalFolder.setDiseaseList(getDiseaseList());
+		medicalFolder.setDiseaseMap(getDiseaseList());
 
 		medicalFolderList.put(1, medicalFolder);
 
