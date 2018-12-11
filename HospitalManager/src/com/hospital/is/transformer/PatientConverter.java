@@ -4,7 +4,7 @@ import com.hospital.is.entity.Patient;
 import com.hospital.is.model.PatientDTO;
 
 public class PatientConverter {
-
+//covertir un patient en DTO
 	PatientDTO toDTO(Patient patient) {
 		PatientDTO dto = new PatientDTO();
 
