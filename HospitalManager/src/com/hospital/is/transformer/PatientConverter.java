@@ -14,11 +14,11 @@ public class PatientConverter {
 	}
 
 	Patient toEntity(PatientDTO patientDto) {
-		Patient dto = new Patient();
+		Patient patient = new Patient();
 
-		dto.setFirstName(patientDto.getFirstName());
+		patient.setFirstName(patientDto.getFirstName());
 
-		return dto;
+		return patient;
 	}
 
 }
