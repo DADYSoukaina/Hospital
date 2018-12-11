@@ -5,55 +5,55 @@ import java.util.Map;
 
 public class MedicalFolderDTO {
 
-	private Map<Integer, DiseaseDTO> diseaseList;
+	private Map<Integer, DiseaseDTO> diseaseMap;
 	
-	private Map<Integer, PrescriptionDTO> prescriptionList;
+	private Map<Integer, PrescriptionDTO> prescriptionMap;
 	
-	private Map<Integer, AppointmentDTO> appointmentList;
+	private Map<Integer, AppointmentDTO> appointmentMap;
 
 
 	/**
-	 * @return the diseaseList
+	 * @return the diseaseMap
 	 */
-	public Map<Integer, DiseaseDTO> getDiseaseList() {
-		return diseaseList;
+	public Map<Integer, DiseaseDTO> getDiseaseMap() {
+		return diseaseMap;
 	}
 
 	/**
-	 * @param diseaseList the diseaseList to set
+	 * @param diseaseMap the diseaseMap to set
 	 */
-	public void setDiseaseList(Map<Integer, DiseaseDTO> diseaseList) {
-		this.diseaseList = diseaseList;
-	}
-	
-
-	/**
-	 * @return the prescriptionList
-	 */
-	public Map<Integer, PrescriptionDTO> getPrescriptionList() {
-		return prescriptionList;
-	}
-
-	/**
-	 * @param prescriptionList the prescriptionList to set
-	 */
-	public void setPrescriptionList(Map<Integer, PrescriptionDTO> prescriptionList) {
-		this.prescriptionList = prescriptionList;
+	public void setDiseaseMap(Map<Integer, DiseaseDTO> diseaseMap) {
+		this.diseaseMap = diseaseMap;
 	}
 	
 
 	/**
-	 * @return the appointmentList
+	 * @return the prescriptionMap
 	 */
-	public Map<Integer, AppointmentDTO> getAppointmentList() {
-		return appointmentList;
+	public Map<Integer, PrescriptionDTO> getPrescriptionMap() {
+		return prescriptionMap;
 	}
 
 	/**
-	 * @param appointmentList the appointmentList to set
+	 * @param prescriptionMap the prescriptionMap to set
 	 */
-	public void setAppointmentList(Map<Integer, AppointmentDTO> appointmentList) {
-		this.appointmentList = appointmentList;
+	public void setPrescriptionMap(Map<Integer, PrescriptionDTO> prescriptionMap) {
+		this.prescriptionMap = prescriptionMap;
+	}
+	
+
+	/**
+	 * @return the appointmentMap
+	 */
+	public Map<Integer, AppointmentDTO> getAppointmentMap() {
+		return appointmentMap;
+	}
+
+	/**
+	 * @param appointmentMap the appointmentMap to set
+	 */
+	public void setAppointmentMap(Map<Integer, AppointmentDTO> appointmentMap) {
+		this.appointmentMap = appointmentMap;
 	}
 
 	/* (non-Javadoc)
@@ -61,7 +61,7 @@ public class MedicalFolderDTO {
 	 */
 	@Override
 	public String toString() {
-		return "MedicalFolder [diseaseList=" + diseaseList + "]";
+		return "MedicalFolder [diseaseMap=" + diseaseMap + "]";
 	}
 	
 	

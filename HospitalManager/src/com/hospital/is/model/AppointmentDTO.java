@@ -12,7 +12,7 @@ public class AppointmentDTO {
 
 	private PatientDTO patient;
 
-	private Map<Integer, PrescriptionDTO> prescriptionList;
+	private Map<Integer, PrescriptionDTO> prescriptionMap;
 
 	/**
 	 * @return the dateTimeAppointment
@@ -57,17 +57,17 @@ public class AppointmentDTO {
 	}
 
 	/**
-	 * @return the prescriptionList
+	 * @return the prescriptionMap
 	 */
-	public Map<Integer, PrescriptionDTO> getPrescriptionList() {
-		return prescriptionList;
+	public Map<Integer, PrescriptionDTO> getPrescriptionMap() {
+		return prescriptionMap;
 	}
 
 	/**
-	 * @param prescriptionList the prescriptionList to set
+	 * @param prescriptionMap the prescriptionMap to set
 	 */
-	public void setPrescriptionList(Map<Integer, PrescriptionDTO> prescriptionList) {
-		this.prescriptionList = prescriptionList;
+	public void setPrescriptionMap(Map<Integer, PrescriptionDTO> prescriptionMap) {
+		this.prescriptionMap = prescriptionMap;
 	}
 
 	/**

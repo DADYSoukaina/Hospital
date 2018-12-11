@@ -1,26 +1,27 @@
 package com.hospital.is.model;
 
+
 import java.util.Map;
 
 public class PrescriptionDTO {
 
-	private Map<Integer, MedicationDTO> medicationlist;
+	private Map<Integer, MedicationDTO> medicationMap;
 	
 	private String descriptionOfUse;
 
 
 	/**
-	 * @return the medicationlist
+	 * @return the medicationMap
 	 */
-	public Map<Integer, MedicationDTO> getMedicationlist() {
-		return medicationlist;
+	public Map<Integer, MedicationDTO> getMedicationMap() {
+		return medicationMap;
 	}
 
 	/**
-	 * @param medicationlist the medicationlist to set
+	 * @param medicationMap the medicationMap to set
 	 */
-	public void setMedicationlist(Map<Integer, MedicationDTO> medicationlist) {
-		this.medicationlist = medicationlist;
+	public void setMedicationMap(Map<Integer, MedicationDTO> medicationMap) {
+		this.medicationMap = medicationMap;
 	}
 
 	/**
