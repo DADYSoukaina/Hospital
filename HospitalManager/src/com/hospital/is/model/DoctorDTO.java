@@ -13,6 +13,7 @@ public class DoctorDTO extends PersonDTO {
 		return registrationNumber;
 	}
 
+	
 	/**
 	 * @param registrationNumber the registrationNumber to set
 	 */
