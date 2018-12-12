@@ -44,7 +44,7 @@ public class StaticDatabase {
 		disease.setDescription("gastro description");
 		disease.setDiagDate("06/12/2018");
 
-		diseaseMap.put("", disease);
+		diseaseMap.put("gastro", disease);
 
 		return diseaseMap;
 	}

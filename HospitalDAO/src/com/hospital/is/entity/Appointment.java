@@ -7,6 +7,8 @@ import java.util.Map;
 //import com.hospital.is.model.PrescriptionDTO;
 
 public class Appointment {
+	private long id;
+
 
 	private String dateTimeAppointment;
 
@@ -30,6 +32,14 @@ public class Appointment {
 	 */
 	public void setDateTimeAppointment(String dateTimeAppointment) {
 		this.dateTimeAppointment = dateTimeAppointment;
+	}
+	
+	public long getId() {
+		return id;
+	}
+
+	public void setId(long id) {
+		this.id = id;
 	}
 
 	/**

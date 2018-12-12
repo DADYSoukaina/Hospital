@@ -28,5 +28,12 @@ public class AppointmentServiceImpl extends ServiceImpl<AppointmentDTO> implemen
 
 		return result;
 	}
+	public Appointment update(Appointment appointment , long id) {
+	while(appointment.getId() == id) {
+		appointment.setDateTimeAppointment(appointment.getDateTimeAppointment());
+		appointment.setTypeAppointment(appointment.getTypeAppointment());
+	}
+	return appointment;
+	}
 
 }
