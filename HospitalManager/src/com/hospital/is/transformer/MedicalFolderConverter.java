@@ -3,7 +3,7 @@ package com.hospital.is.transformer;
 import com.hospital.is.entity.MedicalFolder;
 import com.hospital.is.model.MedicalFolderDTO;
 
-public class MedicalFolderConverter {
+public class MedicalFolderConverter extends AbstractConverter<MedicalFolder, MedicalFolderDTO> {
 
 	private AppointmentConverter appointmentConverter;
 	private DiseaseConverter diseaseConverter;
@@ -30,6 +30,5 @@ public class MedicalFolderConverter {
 
 		return entity;
 	}
-
 
 }

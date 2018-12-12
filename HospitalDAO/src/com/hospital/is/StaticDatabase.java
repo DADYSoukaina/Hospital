@@ -7,6 +7,7 @@ import com.hospital.is.entity.Appointment;
 import com.hospital.is.entity.Disease;
 import com.hospital.is.entity.Doctor;
 import com.hospital.is.entity.MedicalFolder;
+import com.hospital.is.entity.Medication;
 import com.hospital.is.entity.Patient;
 import com.hospital.is.entity.Prescription;
 
@@ -47,6 +48,22 @@ public class StaticDatabase {
 
 		return diseaseMap;
 	}
+	
+	
+	
+	public static Map<String, Prescription> getPrescriptionMap() {
+		Map<String, Prescription> prescriptionMap = new HashMap<String, Prescription>();
+		Map<String, Medication> medicationMap = new HashMap<String, Medication>();
+		
+		Prescription prescription = new Prescription();
+		
+		prescription.setMedicationMap(medicationMap);
+		prescription.setDescriptionOfUse("Description of use");
+
+		prescriptionMap.put("", prescription);
+
+		return prescriptionMap;
+	}
 
 	/**
 	 * 
@@ -75,10 +92,15 @@ public class StaticDatabase {
 		Map<String, MedicalFolder> medicalFolderMap = new HashMap<String, MedicalFolder>();
 		MedicalFolder medicalFolder = new MedicalFolder();
 
+		
+		
 		medicalFolder.setDiseaseMap(getDiseaseMap());
+		medicalFolder.setPrescriptionMap(getPrescriptionMap());
+		medicalFolder.setAppointmentMap(getAppointmentMap());
 
-		medicalFolderMap.put("", medicalFolder);
+		medicalFolderMap.put("FolderID", medicalFolder);
 
+		
 		return medicalFolderMap;
 	}
 
