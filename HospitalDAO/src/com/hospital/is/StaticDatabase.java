@@ -125,6 +125,24 @@ public class StaticDatabase {
 
 		return patientMap;
 	}
+	
+	public static Map<String, Medication> getMedicationMap() {
+
+		Map<String, Medication> medicationMap = new HashMap<>();
+
+		Medication medication = new Medication();
+
+		medication.setMedicationName("Doliprane");
+		medication.setQuantity(1);
+		medication.setDurationOfUse("3 weeks");
+		medication.setInstrutionOfUse("oo");
+
+	
+
+		medicationMap.put("Doliprane", medication);
+
+		return medicationMap;
+	}
 
 	/**
 	 * @return the patientList
