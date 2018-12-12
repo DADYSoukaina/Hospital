@@ -13,10 +13,9 @@ public class MedicationConverter {
 		dto.setInstrutionOfUse(medication.getInstrutionOfUse());
 
 
-
 		return dto;
 	}
-
+//entity
 	public Medication toEntity(MedicationDTO dto) {
 		Medication medication = new Medication();
 
