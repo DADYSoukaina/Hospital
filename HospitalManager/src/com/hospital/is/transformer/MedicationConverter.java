@@ -5,9 +5,7 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.hospital.is.entity.Medication;
-import com.hospital.is.entity.Patient;
 import com.hospital.is.model.MedicationDTO;
-import com.hospital.is.model.PatientDTO;
 
 public class MedicationConverter {
 	public MedicationDTO toDTO(Medication medication) {
@@ -40,7 +38,6 @@ public class MedicationConverter {
 			medicationDTOMap.put(entry.getKey(), toDTO(entry.getValue()));
 		}
 
-		// comment 2 cytfu
 
 		return medicationDTOMap;
 	}
