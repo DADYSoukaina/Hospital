@@ -60,7 +60,7 @@ public class StaticDatabase {
 		prescription.setMedicationMap(medicationMap);
 		prescription.setDescriptionOfUse("Description of use");
 
-		prescriptionMap.put("", prescription);
+		prescriptionMap.put("Description of use", prescription);
 
 		return prescriptionMap;
 	}
