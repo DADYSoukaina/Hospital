@@ -84,4 +84,13 @@ public class AppointmentDTO {
 		this.patient = patient;
 	}
 
+	@Override
+	public String toString() {
+		return "Appointment [" + getDateTimeAppointment() + ","
+				+ getTypeAppointment() + "," + getDoctor() + ","
+				+ getPrescriptionMap() + "," + getPatient() 
+				+ "]";
+	}
+	
+
 }

@@ -1,13 +1,9 @@
 package com.hospital.is.transformer;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.Map.Entry;
-
 import com.hospital.is.entity.Medication;
 import com.hospital.is.model.MedicationDTO;
 
-public class MedicationConverter {
+public class MedicationConverter extends AbstractConverter<Medication,MedicationDTO> {
 	public MedicationDTO toDTO(Medication medication) {
 		MedicationDTO dto = new MedicationDTO();
 
@@ -30,16 +26,5 @@ public class MedicationConverter {
 		return medication;
 	}
 
-	public Map<String, MedicationDTO> toMapDTO(Map<String, Medication> mapMedication) {
-
-		Map<String, MedicationDTO> medicationDTOMap = new HashMap<>();
-
-		for (Entry<String, Medication> entry : mapMedication.entrySet()) {
-			medicationDTOMap.put(entry.getKey(), toDTO(entry.getValue()));
-		}
-
-
-		return medicationDTOMap;
-	}
 
 }

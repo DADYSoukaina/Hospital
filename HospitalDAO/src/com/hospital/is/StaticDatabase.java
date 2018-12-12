@@ -10,6 +10,7 @@ import com.hospital.is.entity.Disease;
 import com.hospital.is.entity.Doctor;
 import com.hospital.is.entity.MedicalFolder;
 import com.hospital.is.entity.Patient;
+import com.hospital.is.entity.Prescription;
 
 public class StaticDatabase {
 
@@ -56,14 +57,15 @@ public class StaticDatabase {
 	public static Map<String, Appointment> getAppointmentList() {
 		// List<Disease> diseaseList = new ArrayList<>();
 		Map<String, Appointment> appointmentList = new HashMap<String, Appointment>();
+		Map<String, Prescription> mapPrescription = new HashMap<String, Prescription>();
 
 		Appointment appointment = new Appointment();
-		appointment.setDateTimeAppointment(null);
+		appointment.setDateTimeAppointment("12/12/2018");
 		appointment.setDoctor(new Doctor());
-		appointment.setPrescriptionMap(null);
+		appointment.setPrescriptionMap(mapPrescription);
 		appointment.setTypeAppointment("Consultation");
 
-		appointmentList.put("", appointment);
+		appointmentList.put("Consultation", appointment);
 
 		return appointmentList;
 	}
