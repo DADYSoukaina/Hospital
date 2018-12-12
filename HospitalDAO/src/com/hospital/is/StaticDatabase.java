@@ -1,8 +1,6 @@
 package com.hospital.is;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 
 import com.hospital.is.entity.Appointment;
@@ -36,27 +34,26 @@ public class StaticDatabase {
 	/**
 	 * @return the diseaseList
 	 */
-	public static Map<String, Disease> getDiseaseList() {
+	public static Map<String, Disease> getDiseaseMap() {
 		// List<Disease> diseaseList = new ArrayList<>();
-		Map<String, Disease> diseaseList = new HashMap<String, Disease>();
+		Map<String, Disease> diseaseMap = new HashMap<String, Disease>();
 
 		Disease disease = new Disease();
 		disease.setNature("gastro");
 		disease.setDescription("gastro description");
 		disease.setDiagDate("06/12/2018");
 
-		diseaseList.put("", disease);
+		diseaseMap.put("", disease);
 
-		return diseaseList;
+		return diseaseMap;
 	}
 
 	/**
 	 * 
 	 * @return
 	 */
-	public static Map<String, Appointment> getAppointmentList() {
-		// List<Disease> diseaseList = new ArrayList<>();
-		Map<String, Appointment> appointmentList = new HashMap<String, Appointment>();
+	public static Map<String, Appointment> getAppointmentMap() {
+		Map<String, Appointment> appointmentMap = new HashMap<String, Appointment>();
 		Map<String, Prescription> mapPrescription = new HashMap<String, Prescription>();
 
 		Appointment appointment = new Appointment();
@@ -65,59 +62,54 @@ public class StaticDatabase {
 		appointment.setPrescriptionMap(mapPrescription);
 		appointment.setTypeAppointment("Consultation");
 
-		appointmentList.put("Consultation", appointment);
+		appointmentMap.put("Consultation", appointment);
 
-		return appointmentList;
+		return appointmentMap;
 	}
 
 	/**
 	 * @return the medicalFolderList
 	 */
-	public static Map<String, MedicalFolder> getMedicalFolderList() {
+	public static Map<String, MedicalFolder> getMedicalFolderMap() {
 		// List<MedicalFolder> medicalFolderList = new ArrayList<>();
-		Map<String, MedicalFolder> medicalFolderList = new HashMap<String, MedicalFolder>();
+		Map<String, MedicalFolder> medicalFolderMap = new HashMap<String, MedicalFolder>();
 		MedicalFolder medicalFolder = new MedicalFolder();
 
-		medicalFolder.setDiseaseMap(getDiseaseList());
+		medicalFolder.setDiseaseMap(getDiseaseMap());
 
-		medicalFolderList.put("", medicalFolder);
+		medicalFolderMap.put("", medicalFolder);
 
-		return medicalFolderList;
+		return medicalFolderMap;
 	}
 
 	/**
 	 * @return the patientList
 	 */
-	public static Map<String, Patient> getPatientList() {
+	public static Map<String, Patient> getPatientMap() {
 
-		List<Patient> patientList = new ArrayList<>();
-		Map<String, Patient> map = new HashMap<>();
+		Map<String, Patient> patientMap = new HashMap<>();
 
 		Patient patient = new Patient();
 
-		patient.setMedicalFolder(getMedicalFolderList().get(0));
+		patient.setMedicalFolder(getMedicalFolderMap().get(""));
 		patient.setFirstName("Code");
 		patient.setLastName("Burners");
 		patient.setAddress("30 rue soulaimane achaairi, 20500, Tetouan Maroc");
 		patient.setBirthDate("01/01/1970");
 		patient.setPhone("+212 6 66 77 88 99");
 
-		patientList.add(patient);
+		patientMap.put(patient.getLastName() + patient.getFirstName(), patient);
+		patientMap.put(patient.getLastName() + patient.getFirstName() + "_bis", patient);
 
-		map.put(patient.getLastName() + patient.getFirstName(), patient);
-		map.put(patient.getLastName() + patient.getFirstName() + "_bis", patient);
-
-		
-		return map;
+		return patientMap;
 	}
 
 	/**
 	 * @return the patientList
 	 */
-	public static Map<String, Doctor> getDoctorList() {
+	public static Map<String, Doctor> getDoctorMap() {
 
-		List<Doctor> doctorList = new ArrayList<>();
-		Map<String, Doctor> map = new HashMap<>();
+		Map<String, Doctor> doctorMap = new HashMap<>();
 
 		Doctor doctor = new Doctor();
 
@@ -127,11 +119,9 @@ public class StaticDatabase {
 		doctor.setBirthDate("01/01/1974");
 		doctor.setPhone("+212 6 66 77 88 77");
 
-		doctorList.add(doctor);
+		doctorMap.put(doctor.getLastName() + doctor.getFirstName(), doctor);
 
-		map.put(doctor.getLastName() + doctor.getFirstName(), doctor);
-
-		return map;
+		return doctorMap;
 	}
 
 }
