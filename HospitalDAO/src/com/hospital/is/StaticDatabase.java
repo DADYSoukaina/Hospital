@@ -35,16 +35,16 @@ public class StaticDatabase {
 	/**
 	 * @return the diseaseList
 	 */
-	public static Map<Integer, Disease> getDiseaseList() {
+	public static Map<String, Disease> getDiseaseList() {
 		// List<Disease> diseaseList = new ArrayList<>();
-		Map<Integer, Disease> diseaseList = new HashMap<Integer, Disease>();
+		Map<String, Disease> diseaseList = new HashMap<String, Disease>();
 
 		Disease disease = new Disease();
 		disease.setNature("gastro");
 		disease.setDescription("gastro description");
 		disease.setDiagDate("06/12/2018");
 
-		diseaseList.put(1, disease);
+		diseaseList.put("", disease);
 
 		return diseaseList;
 	}
@@ -53,9 +53,9 @@ public class StaticDatabase {
 	 * 
 	 * @return
 	 */
-	public static Map<Integer, Appointment> getAppointmentList() {
+	public static Map<String, Appointment> getAppointmentList() {
 		// List<Disease> diseaseList = new ArrayList<>();
-		Map<Integer, Appointment> appointmentList = new HashMap<Integer, Appointment>();
+		Map<String, Appointment> appointmentList = new HashMap<String, Appointment>();
 
 		Appointment appointment = new Appointment();
 		appointment.setDateTimeAppointment(null);
@@ -63,7 +63,7 @@ public class StaticDatabase {
 		appointment.setPrescriptionMap(null);
 		appointment.setTypeAppointment("Consultation");
 
-		appointmentList.put(1, appointment);
+		appointmentList.put("", appointment);
 
 		return appointmentList;
 	}
@@ -71,14 +71,14 @@ public class StaticDatabase {
 	/**
 	 * @return the medicalFolderList
 	 */
-	public static Map<Integer, MedicalFolder> getMedicalFolderList() {
+	public static Map<String, MedicalFolder> getMedicalFolderList() {
 		// List<MedicalFolder> medicalFolderList = new ArrayList<>();
-		Map<Integer, MedicalFolder> medicalFolderList = new HashMap<Integer, MedicalFolder>();
+		Map<String, MedicalFolder> medicalFolderList = new HashMap<String, MedicalFolder>();
 		MedicalFolder medicalFolder = new MedicalFolder();
 
 		medicalFolder.setDiseaseMap(getDiseaseList());
 
-		medicalFolderList.put(1, medicalFolder);
+		medicalFolderList.put("", medicalFolder);
 
 		return medicalFolderList;
 	}

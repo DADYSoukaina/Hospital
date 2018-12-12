@@ -9,24 +9,24 @@ import java.util.Map;
 
 public class MedicalFolder {
 
-	private Map<Integer, Disease> diseaseMap;
+	private Map<String, Disease> diseaseMap;
 	
-	private Map<Integer, Prescription> prescriptionMap;
+	private Map<String, Prescription> prescriptionMap;
 	
-	private Map<Integer, Appointment> appointmentMap;
+	private Map<String, Appointment> appointmentMap;
 
 
 	/**
 	 * @return the diseaseMap
 	 */
-	public Map<Integer, Disease> getDiseaseMap() {
+	public Map<String, Disease> getDiseaseMap() {
 		return diseaseMap;
 	}
 
 	/**
 	 * @param diseaseMap the diseaseMap to set
 	 */
-	public void setDiseaseMap(Map<Integer, Disease> diseaseMap) {
+	public void setDiseaseMap(Map<String, Disease> diseaseMap) {
 		this.diseaseMap = diseaseMap;
 	}
 	
@@ -34,14 +34,14 @@ public class MedicalFolder {
 	/**
 	 * @return the prescriptionMap
 	 */
-	public Map<Integer, Prescription> getPrescriptionMap() {
+	public Map<String, Prescription> getPrescriptionMap() {
 		return prescriptionMap;
 	}
 
 	/**
 	 * @param prescriptionMap the prescriptionMap to set
 	 */
-	public void setPrescriptionMap(Map<Integer, Prescription> prescriptionMap) {
+	public void setPrescriptionMap(Map<String, Prescription> prescriptionMap) {
 		this.prescriptionMap = prescriptionMap;
 	}
 	
@@ -49,14 +49,14 @@ public class MedicalFolder {
 	/**
 	 * @return the appointmentMap
 	 */
-	public Map<Integer, Appointment> getAppointmentMap() {
+	public Map<String, Appointment> getAppointmentMap() {
 		return appointmentMap;
 	}
 
 	/**
 	 * @param appointmentMap the appointmentMap to set
 	 */
-	public void setAppointmentMap(Map<Integer, Appointment> appointmentMap) {
+	public void setAppointmentMap(Map<String, Appointment> appointmentMap) {
 		this.appointmentMap = appointmentMap;
 	}
 

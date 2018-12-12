@@ -5,24 +5,24 @@ import java.util.Map;
 
 public class MedicalFolderDTO {
 
-	private Map<Integer, DiseaseDTO> diseaseMap;
+	private Map<String, DiseaseDTO> diseaseMap;
 	
-	private Map<Integer, PrescriptionDTO> prescriptionMap;
+	private Map<String, PrescriptionDTO> prescriptionMap;
 	
-	private Map<Integer, AppointmentDTO> appointmentMap;
+	private Map<String, AppointmentDTO> appointmentMap;
 
 
 	/**
 	 * @return the diseaseMap
 	 */
-	public Map<Integer, DiseaseDTO> getDiseaseMap() {
+	public Map<String, DiseaseDTO> getDiseaseMap() {
 		return diseaseMap;
 	}
 
 	/**
 	 * @param diseaseMap the diseaseMap to set
 	 */
-	public void setDiseaseMap(Map<Integer, DiseaseDTO> diseaseMap) {
+	public void setDiseaseMap(Map<String, DiseaseDTO> diseaseMap) {
 		this.diseaseMap = diseaseMap;
 	}
 	
@@ -30,14 +30,14 @@ public class MedicalFolderDTO {
 	/**
 	 * @return the prescriptionMap
 	 */
-	public Map<Integer, PrescriptionDTO> getPrescriptionMap() {
+	public Map<String, PrescriptionDTO> getPrescriptionMap() {
 		return prescriptionMap;
 	}
 
 	/**
 	 * @param prescriptionMap the prescriptionMap to set
 	 */
-	public void setPrescriptionMap(Map<Integer, PrescriptionDTO> prescriptionMap) {
+	public void setPrescriptionMap(Map<String, PrescriptionDTO> prescriptionMap) {
 		this.prescriptionMap = prescriptionMap;
 	}
 	
@@ -45,14 +45,14 @@ public class MedicalFolderDTO {
 	/**
 	 * @return the appointmentMap
 	 */
-	public Map<Integer, AppointmentDTO> getAppointmentMap() {
+	public Map<String, AppointmentDTO> getAppointmentMap() {
 		return appointmentMap;
 	}
 
 	/**
 	 * @param appointmentMap the appointmentMap to set
 	 */
-	public void setAppointmentMap(Map<Integer, AppointmentDTO> appointmentMap) {
+	public void setAppointmentMap(Map<String, AppointmentDTO> appointmentMap) {
 		this.appointmentMap = appointmentMap;
 	}
 
