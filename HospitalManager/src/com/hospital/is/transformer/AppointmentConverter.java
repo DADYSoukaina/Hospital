@@ -1,6 +1,7 @@
 package com.hospital.is.transformer;
 
-import java.security.KeyStore.Entry;
+
+import java.util.Map.Entry;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -31,15 +32,23 @@ public class AppointmentConverter {
 
 		return appointment;
 	}
-	public Map<String,AppointmentDTO> toMapDTO(Map<Integer,Appointment> appointment) {
-		Map<Integer,AppointmentDTO> dtoMap=new HashMap();
-		for(Entry<Integer,Appointment> entry : appointment.entrySet()) {
-			dtoMap.put(entry.getKey(),toDTO(entry.getValue()));
+	public Map<String,AppointmentDTO> toMapDTO(Map<String,Appointment> appointmentMap) {
+		Map<String,AppointmentDTO> appointmentdto=new HashMap<>();
+		for(Entry<String, Appointment> entry : appointmentMap.entrySet()) {
+			appointmentdto.put(entry.getKey(),toDTO(entry.getValue()));
 		}
-		 return dtoMap;
+		 return appointmentdto;
 
 	}
-	public Appointment toMapEntity(AppointmentDTO dto) {
+	
+	
+		
+	public Map<String,Appointment> toMapEntity(Map<String,AppointmentDTO> appointmentdto) {
+		Map<String,Appointment> appointmentMap=new HashMap<>();
+		for(Entry<String, AppointmentDTO> entry : appointmentdto.entrySet()) {
+			appointmentMap.put(entry.getKey(),toEntity(entry.getValue()));
+		}
+		 return appointmentMap;
 		
 	}
 }
