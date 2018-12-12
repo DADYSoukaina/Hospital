@@ -5,9 +5,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 
 import com.hospital.is.entity.Disease;
-import com.hospital.is.entity.Patient;
 import com.hospital.is.model.DiseaseDTO;
-import com.hospital.is.model.PatientDTO;
+
 
 public class DiseaseConverter {
 

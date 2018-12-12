@@ -94,8 +94,8 @@ public class StaticDatabase {
 		Patient patient = new Patient();
 
 		patient.setMedicalFolder(getMedicalFolderList().get(0));
-		patient.setFirstName("Majda");
-		patient.setLastName("AMCHICHI");
+		patient.setFirstName("Code");
+		patient.setLastName("Burners");
 		patient.setAddress("30 rue soulaimane achaairi, 20500, Tetouan Maroc");
 		patient.setBirthDate("01/01/1970");
 		patient.setPhone("+212 6 66 77 88 99");
@@ -103,7 +103,9 @@ public class StaticDatabase {
 		patientList.add(patient);
 
 		map.put(patient.getLastName() + patient.getFirstName(), patient);
+		map.put(patient.getLastName() + patient.getFirstName() + "_bis", patient);
 
+		
 		return map;
 	}
 

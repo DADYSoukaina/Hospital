@@ -22,8 +22,10 @@ public class PatientServiceImpl extends ServiceImpl<PatientDTO> implements Patie
 		Map<String, Patient> map = StaticDatabase.getPatientList();
 
 		Map<String, PatientDTO> result = new HashMap<>();
+		
+		result.putAll(converter.toMapDTO(map));
 
-		result.put("AMCHICHIMajda", converter.toDTO(map.get("AMCHICHIMajda")));
+		result.put("BurnersCode", converter.toDTO(map.get("BurnersCode")));
 
 		return result;
 	}
