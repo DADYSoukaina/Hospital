@@ -42,10 +42,19 @@ public Map<String, PatientDTO> toMapDTO(Map<String, Patient> mapPatient) {
 			patientDtoMap.put(entry.getKey(), toDTO(entry.getValue()));
 		}
 		
-		// comment 2 cytfu
-		
 		return patientDtoMap;
 	}
+
+public Map<String, Patient> toMapEntity(Map<String, PatientDTO> mapPatientDTO) {
+	
+	Map<String, Patient> patientMap = new HashMap<String,Patient>();
+	
+	for(Entry<String, PatientDTO> entry : mapPatientDTO.entrySet()) {
+		patientMap.put(entry.getKey(), toEntity(entry.getValue()));
+	}
+	
+	return patientMap;
+}
 
 	
 }
