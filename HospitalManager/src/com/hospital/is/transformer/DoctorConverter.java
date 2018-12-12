@@ -41,7 +41,7 @@ public class DoctorConverter {
 
 	}
 	
-	
+	//Ajouter toMapEntity
 		
 	public Map<String,Doctor> toMapEntity(Map<String,DoctorDTO> doctordto) {
 		Map<String,Doctor> doctorMap=new HashMap<>();
