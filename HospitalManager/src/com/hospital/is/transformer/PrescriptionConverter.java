@@ -4,9 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
-import com.hospital.is.entity.Doctor;
 import com.hospital.is.entity.Prescription;
-import com.hospital.is.model.DoctorDTO;
 import com.hospital.is.model.PrescriptionDTO;
 
 public class PrescriptionConverter {
