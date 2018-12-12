@@ -34,7 +34,7 @@ public class PatientConverter {
 		return patient;
 	}
 
-	public Map<String, PatientDTO> toMapDTO(Map<String, Patient> mapPatient) {
+public Map<String, PatientDTO> toMapDTO(Map<String, Patient> mapPatient) {
 		
 		Map<String, PatientDTO> patientDtoMap = new HashMap<>();
 		
