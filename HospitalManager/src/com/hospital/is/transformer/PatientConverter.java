@@ -42,7 +42,7 @@ public Map<String, PatientDTO> toMapDTO(Map<String, Patient> mapPatient) {
 			patientDtoMap.put(entry.getKey(), toDTO(entry.getValue()));
 		}
 		
-		// comment
+		// comment 2
 		
 		return patientDtoMap;
 	}
