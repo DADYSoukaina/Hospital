@@ -2,11 +2,11 @@ package com.hospital.is.dao.impl;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
 import com.hospital.is.StaticDatabase;
 import com.hospital.is.dao.PatientDao;
 import com.hospital.is.entity.Patient;
-//import com.hospital.is.transformer.PatientConverter;
 
 public class PatientDaoImpl extends DaoImpl<Patient> implements PatientDao {
 
@@ -33,17 +33,11 @@ public class PatientDaoImpl extends DaoImpl<Patient> implements PatientDao {
 	}
 
 	@Override
-	public Patient update(Patient t, long id) {
+	public Patient update(Patient patient, long id) {
 
-		Patient patient = StaticDatabase.getPatientMap().get(id);
-
-		patient.setFirstName(t.getFirstName());
-		patient.setLastName(t.getLastName());
-		patient.setFirstName(t.getFirstName());
-		patient.setAddress(t.getAddress());
-		patient.setBirthDate(t.getBirthDate());
-		patient.setPhone(t.getPhone());
-
+		for(Entry<Long, Patient> entry : getAll().entrySet())
+			if(entry.getKey()==id)
+				entry.setValue(patient);
 		return patient;
 	}
 
