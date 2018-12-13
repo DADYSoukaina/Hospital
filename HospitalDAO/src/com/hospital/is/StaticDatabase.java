@@ -48,15 +48,13 @@ public class StaticDatabase {
 
 		return diseaseMap;
 	}
-	
-	
-	
+
 	public static Map<String, Prescription> getPrescriptionMap() {
 		Map<String, Prescription> prescriptionMap = new HashMap<String, Prescription>();
 		Map<String, Medication> medicationMap = new HashMap<String, Medication>();
-		
+
 		Prescription prescription = new Prescription();
-		
+
 		prescription.setMedicationMap(medicationMap);
 		prescription.setDescriptionOfUse("Description of use");
 
@@ -88,19 +86,19 @@ public class StaticDatabase {
 	 * @return the medicalFolderList
 	 */
 	public static Map<String, MedicalFolder> getMedicalFolderMap() {
-		// List<MedicalFolder> medicalFolderList = new ArrayList<>();
 		Map<String, MedicalFolder> medicalFolderMap = new HashMap<String, MedicalFolder>();
 		MedicalFolder medicalFolder = new MedicalFolder();
 
-		
-		
-		medicalFolder.setDiseaseMap(getDiseaseMap());
-		medicalFolder.setPrescriptionMap(getPrescriptionMap());
-		medicalFolder.setAppointmentMap(getAppointmentMap());
+		Map<String, Prescription> mapPrescription = new HashMap<String, Prescription>();
+		Map<String, Disease> mapDisease = new HashMap<String, Disease>();
+		Map<String, Appointment> mapAppointment = new HashMap<String, Appointment>();
+
+		medicalFolder.setDiseaseMap(mapDisease);
+		medicalFolder.setPrescriptionMap(mapPrescription);
+		medicalFolder.setAppointmentMap(mapAppointment);
 
 		medicalFolderMap.put("FolderID", medicalFolder);
 
-		
 		return medicalFolderMap;
 	}
 
@@ -125,7 +123,7 @@ public class StaticDatabase {
 
 		return patientMap;
 	}
-	
+
 	public static Map<String, Medication> getMedicationMap() {
 
 		Map<String, Medication> medicationMap = new HashMap<>();
@@ -136,8 +134,6 @@ public class StaticDatabase {
 		medication.setQuantity(1);
 		medication.setDurationOfUse("3 weeks");
 		medication.setInstrutionOfUse("oo");
-
-	
 
 		medicationMap.put("Doliprane", medication);
 
