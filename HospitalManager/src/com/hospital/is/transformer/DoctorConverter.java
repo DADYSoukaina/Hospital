@@ -32,9 +32,9 @@ public class DoctorConverter {
 
 		return doctor;
 	}
-	public Map<String,DoctorDTO> toMapDTO(Map<String,Doctor> doctorMap) {
-		Map<String,DoctorDTO> doctordto=new HashMap<>();
-		for(Entry<String,Doctor> entry : doctorMap.entrySet()) {
+	public Map<Long,DoctorDTO> toMapDTO(Map<Long,Doctor> doctorMap) {
+		Map<Long,DoctorDTO> doctordto=new HashMap<>();
+		for(Entry<Long,Doctor> entry : doctorMap.entrySet()) {
 			doctordto.put(entry.getKey(),toDTO(entry.getValue()));
 		}
 		 return doctordto;
