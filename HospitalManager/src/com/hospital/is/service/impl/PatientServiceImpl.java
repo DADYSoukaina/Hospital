@@ -3,7 +3,6 @@ package com.hospital.is.service.impl;
 import java.util.HashMap;
 import java.util.Map;
 
-import com.hospital.is.StaticDatabase;
 import com.hospital.is.dao.PatientDao;
 import com.hospital.is.dao.impl.PatientDaoImpl;
 import com.hospital.is.entity.Patient;
@@ -21,15 +20,15 @@ public class PatientServiceImpl extends ServiceImpl<PatientDTO> implements Patie
 	private PatientConverter converter = new PatientConverter();
 
 	@Override
-	public Map<String, PatientDTO> getAll() {
+	public Map<Long, PatientDTO> getAll() {
 
-		Map<String, Patient> map = patientDao.getAll();
+		Map<Long, Patient> map = patientDao.getAll();
 
-		Map<String, PatientDTO> result = new HashMap<>();
+		Map<Long, PatientDTO> result = new HashMap<>();
 
 		result.putAll(converter.toMapDTO(map));
 
-		result.put("BurnersCode", converter.toDTO(map.get("BurnersCode")));
+		result.put(1l, converter.toDTO(map.get(1l)));
 
 		return result;
 	}

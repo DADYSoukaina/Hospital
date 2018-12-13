@@ -13,7 +13,7 @@ public class DaoImpl<T> implements Dao<T> {
 	}
 
 	@Override
-	public Map<String, T> getAll() {
+	public Map<Long, T> getAll() {
 		// TODO Auto-generated method stub
 		return null;
 	}

@@ -20,15 +20,15 @@ public class DoctorServiceImpl extends ServiceImpl<DoctorDTO> implements DoctorS
 	private DoctorConverter converter = new DoctorConverter();
 
 	@Override
-	public Map<String, DoctorDTO> getAll() {
+	public Map<Long, DoctorDTO> getAll() {
 
-		Map<String, Doctor> map = StaticDatabase.getDoctorMap();
+		Map<Long, Doctor> map = StaticDatabase.getDoctorMap();
 
-		Map<String, DoctorDTO> result = new HashMap<>();
+		Map<Long, DoctorDTO> result = new HashMap<>();
 
 		result.putAll(converter.toMapDTO(map));
 
-		result.put("BENANIAhmed", converter.toDTO(map.get("BENANIAhmed")));
+		result.put(1l, converter.toDTO(map.get(1l)));
 
 		return result;
 	}

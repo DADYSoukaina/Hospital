@@ -20,15 +20,15 @@ public class MedicationServiceImpl  extends ServiceImpl<MedicationDTO> implement
 	private MedicationConverter converter = new MedicationConverter();
 
 	@Override
-	public Map<String, MedicationDTO> getAll() {
+	public Map<Long, MedicationDTO> getAll() {
 
-		Map<String, Medication> map = StaticDatabase.getMedicationMap();
+		Map<Long, Medication> map = StaticDatabase.getMedicationMap();
 
-		Map<String, MedicationDTO> result = new HashMap<>();
+		Map<Long, MedicationDTO> result = new HashMap<>();
 
 		result.putAll(converter.toMapDTO(map));
 
-		result.put("gastro", converter.toDTO(map.get("gastro")));
+		result.put(1l, converter.toDTO(map.get(1l)));
 
 		return result;
 	}

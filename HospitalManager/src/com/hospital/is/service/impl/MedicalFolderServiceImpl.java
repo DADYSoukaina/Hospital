@@ -14,15 +14,15 @@ public class MedicalFolderServiceImpl extends ServiceImpl<MedicalFolderDTO> impl
 	private MedicalFolderConverter converter = new MedicalFolderConverter();
 
 	@Override
-	public Map<String, MedicalFolderDTO> getAll() {
+	public Map<Long, MedicalFolderDTO> getAll() {
 
-		Map<String, MedicalFolder> map = StaticDatabase.getMedicalFolderMap();
+		Map<Long, MedicalFolder> map = StaticDatabase.getMedicalFolderMap();
 
-		Map<String, MedicalFolderDTO> result = new HashMap<>();
+		Map<Long, MedicalFolderDTO> result = new HashMap<>();
 
 		result.putAll(converter.toMapDTO(map));
 		
-		result.put("FolderID",converter.toDTO(map.get("FolderID")));
+		result.put(1l,converter.toDTO(map.get(1l)));
 		
 
 		return result;

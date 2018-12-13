@@ -17,15 +17,15 @@ public class DiseaseServiceImpl extends ServiceImpl<DiseaseDTO> implements Disea
 	private DiseaseConverter converter = new DiseaseConverter();
 
 	@Override
-	public Map<String, DiseaseDTO> getAll() {
+	public Map<Long, DiseaseDTO> getAll() {
 
-		Map<String, Disease> map = StaticDatabase.getDiseaseMap();
+		Map<Long, Disease> map = StaticDatabase.getDiseaseMap();
 
-		Map<String, DiseaseDTO> result = new HashMap<>();
+		Map<Long, DiseaseDTO> result = new HashMap<>();
 
 		result.putAll(converter.toMapDTO(map));
 
-		result.put("gastro", converter.toDTO(map.get("gastro")));
+		result.put(1l, converter.toDTO(map.get(1l)));
 
 		return result;
 	}

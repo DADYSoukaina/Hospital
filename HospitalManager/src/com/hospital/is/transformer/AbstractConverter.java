@@ -10,20 +10,20 @@ public abstract class AbstractConverter<Entity, DTO> {
 
 	public abstract Entity toEntity(DTO DTO);
 
-	public Map<String, Entity> toMapEntity(Map<String, DTO> mapDTO) {
-		Map<String, Entity> entityMap = new HashMap<String, Entity>();
+	public Map<Long, Entity> toMapEntity(Map<Long, DTO> mapDTO) {
+		Map<Long, Entity> entityMap = new HashMap<Long, Entity>();
 
-		for (Entry<String, DTO> entry : mapDTO.entrySet()) {
+		for (Entry<Long, DTO> entry : mapDTO.entrySet()) {
 			entityMap.put(entry.getKey(), toEntity(entry.getValue()));
 		}
 
 		return entityMap;
 	}
 
-	public Map<String, DTO> toMapDTO(Map<String, Entity> mapEntity) {
-		Map<String, DTO> dtoMap = new HashMap<>();
+	public Map<Long, DTO> toMapDTO(Map<Long, Entity> mapEntity) {
+		Map<Long, DTO> dtoMap = new HashMap<>();
 
-		for (Entry<String, Entity> entry : mapEntity.entrySet()) {
+		for (Entry<Long, Entity> entry : mapEntity.entrySet()) {
 			dtoMap.put(entry.getKey(), toDTO(entry.getValue()));
 		}
 

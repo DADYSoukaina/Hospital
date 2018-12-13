@@ -21,15 +21,15 @@ public class PrescriptionServiceImpl extends ServiceImpl<PrescriptionDTO> implem
 	private PrescriptionConverter converter = new PrescriptionConverter();
 
 	@Override
-	public Map<String, PrescriptionDTO> getAll() {
+	public Map<Long, PrescriptionDTO> getAll() {
 
-		Map<String, Prescription> map = StaticDatabase.getPrescriptionMap();
+		Map<Long, Prescription> map = StaticDatabase.getPrescriptionMap();
 
-		Map<String, PrescriptionDTO> result = new HashMap<>();
+		Map<Long, PrescriptionDTO> result = new HashMap<>();
 
 		result.putAll(converter.toMapDTO(map));
 
-		result.put("Description of use", converter.toDTO(map.get("Description of use")));
+		result.put(1l, converter.toDTO(map.get(1l)));
 
 		return result;
 	}

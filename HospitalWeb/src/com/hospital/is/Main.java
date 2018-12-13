@@ -17,15 +17,15 @@ public class Main {
 	public static void main(String[] args) {
 
 		PatientService patientService = new PatientServiceImpl();
-		Map<String, PatientDTO> map = patientService.getAll();
+		Map<Long, PatientDTO> map = patientService.getAll();
 		System.out.println(map);
 
 		AppointmentService appointmentService = new AppointmentServiceImpl();
-		Map<String, AppointmentDTO> map1 = appointmentService.getAll();
+		Map<Long, AppointmentDTO> map1 = appointmentService.getAll();
 		System.out.println(map1);
 
 		MedicalFolderService medicalFolderService = new MedicalFolderServiceImpl();
-		Map<String, MedicalFolderDTO> map2 = medicalFolderService.getAll();
+		Map<Long, MedicalFolderDTO> map2 = medicalFolderService.getAll();
 		System.out.println(map2);
 
 	}

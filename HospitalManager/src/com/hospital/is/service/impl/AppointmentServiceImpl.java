@@ -16,15 +16,15 @@ public class AppointmentServiceImpl extends ServiceImpl<AppointmentDTO> implemen
 	private AppointmentConverter converter = new AppointmentConverter();
 
 	@Override
-	public Map<String, AppointmentDTO> getAll() {
+	public Map<Long, AppointmentDTO> getAll() {
 
-		Map<String, Appointment> map = StaticDatabase.getAppointmentMap();
+		Map<Long, Appointment> map = StaticDatabase.getAppointmentMap();
 
-		Map<String, AppointmentDTO> result = new HashMap<>();
+		Map<Long, AppointmentDTO> result = new HashMap<>();
 
 		result.putAll(converter.toMapDTO(map));
 
-		result.put("Consultation", converter.toDTO(map.get("Consultation")));
+		result.put(1l, converter.toDTO(map.get(1l)));
 
 		return result;
 	}
