@@ -12,11 +12,8 @@ import com.hospital.is.transformer.PatientConverter;
 
 public class PatientServiceImpl extends ServiceImpl<PatientDTO> implements PatientService {
 
-	
 	PatientDao patientDao = new PatientDaoImpl();
-	
-	
-	
+
 	private PatientConverter converter = new PatientConverter();
 
 	@Override
@@ -32,12 +29,26 @@ public class PatientServiceImpl extends ServiceImpl<PatientDTO> implements Patie
 
 		return result;
 	}
-	
-	@Override
-    public PatientDTO getById(long id) {
-		
-	Patient patient=patientDao.getById(id);
-	return converter.toDTO(patient);
-}
 
+	@Override
+	public PatientDTO getById(long id) {
+
+		Patient patient = patientDao.getById(id);
+		return converter.toDTO(patient);
+	}
+
+	@Override
+	public PatientDTO create(PatientDTO t) {
+		// TODO Auto-generated method stub
+		return super.create(t);
+	}
+
+	@Override
+	public PatientDTO update(PatientDTO t, long id) {
+		// TODO Auto-generated method stub
+		return super.update(t, id);
+	}
+
+	
+	
 }

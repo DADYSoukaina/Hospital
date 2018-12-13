@@ -23,10 +23,26 @@ public class PatientDaoImpl extends DaoImpl<Patient> implements PatientDao {
 
 		return result;
 	}
-	public Patient getPatientById(long id) {
-		Patient patient=StaticDatabase.getPatientMap().get(id);
-	
-			return patient;
+
+	@Override
+	public Patient getById(long id) {
+		
+		Patient patient = StaticDatabase.getPatientMap().get(id);
+
+		return patient;
 	}
 
+	@Override
+	public Patient create(Patient t) {
+		// TODO Auto-generated method stub
+		return super.create(t);
+	}
+
+	@Override
+	public Patient update(Patient t, long id) {
+		// TODO Auto-generated method stub
+		return super.update(t, id);
+	}
+
+	
 }
