@@ -11,17 +11,22 @@ import com.hospital.is.entity.Patient;
 public class PatientDaoImpl extends DaoImpl<Patient> implements PatientDao {
 
 	@Override
-	public Map<String, Patient> getAll() {
+	public Map<Long, Patient> getAll() {
 
-		Map<String, Patient> map = StaticDatabase.getPatientMap();
+		Map<Long, Patient> map = StaticDatabase.getPatientMap();
 
-		Map<String, Patient> result = new HashMap<>();
+		Map<Long, Patient> result = new HashMap<>();
 
 		result.putAll(map);
 
-		result.put("BurnersCode", map.get("BurnersCode"));
+		result.put(1L, map.get(1L));
 
 		return result;
+	}
+	public Patient getPatientById(long id) {
+		Patient patient=StaticDatabase.getPatientMap().get(id);
+	
+			return patient;
 	}
 
 }

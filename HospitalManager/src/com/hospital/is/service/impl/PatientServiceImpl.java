@@ -28,9 +28,16 @@ public class PatientServiceImpl extends ServiceImpl<PatientDTO> implements Patie
 
 		result.putAll(converter.toMapDTO(map));
 
-		result.put(1l, converter.toDTO(map.get(1l)));
+		result.put(1L, converter.toDTO(map.get(1L)));
 
 		return result;
 	}
+	
+	@Override
+    public PatientDTO getById(long id) {
+		
+	Patient patient=patientDao.getById(id);
+	return converter.toDTO(patient);
+}
 
 }

@@ -18,7 +18,7 @@ public class Appointment {
 
 	private Patient patient;
 
-	private Map<String, Prescription> prescriptionMap;
+	private Map<Long, Prescription> prescriptionMap;
 
 	/**
 	 * @return the dateTimeAppointment
@@ -73,14 +73,14 @@ public class Appointment {
 	/**
 	 * @return the prescriptionMap
 	 */
-	public Map<String, Prescription> getPrescriptionMap() {
+	public Map<Long, Prescription> getPrescriptionMap() {
 		return prescriptionMap;
 	}
 
 	/**
 	 * @param prescriptionMap the prescriptionMap to set
 	 */
-	public void setPrescriptionMap(Map<String, Prescription> prescriptionMap) {
+	public void setPrescriptionMap(Map<Long, Prescription> prescriptionMap) {
 		this.prescriptionMap = prescriptionMap;
 	}
 

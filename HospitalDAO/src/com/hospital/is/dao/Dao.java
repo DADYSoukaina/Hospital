@@ -6,7 +6,7 @@ public interface Dao<T> {
 
 	T create(T t);
 
-	Map<String, T> getAll();
+	Map<Long, T> getAll();
 
 	T getById(long id);
 
