@@ -5,9 +5,9 @@ import com.hospital.is.model.MedicalFolderDTO;
 
 public class MedicalFolderConverter extends AbstractConverter<MedicalFolder, MedicalFolderDTO> {
 
-	private AppointmentConverter appointmentConverter;
-	private DiseaseConverter diseaseConverter;
-	private PrescriptionConverter prescriptionConverter;
+	private AppointmentConverter appointmentConverter=new AppointmentConverter();
+	private DiseaseConverter diseaseConverter= new DiseaseConverter();
+	private PrescriptionConverter prescriptionConverter= new PrescriptionConverter();
 
 	public MedicalFolderDTO toDTO(MedicalFolder MedicalFolder) {
 

@@ -20,8 +20,8 @@ public class Main {
 		Map<String, PatientDTO> map = patientService.getAll();
 		System.out.println(map);
 
-		AppointmentService AppointmentService = new AppointmentServiceImpl();
-		Map<String, AppointmentDTO> map1 = AppointmentService.getAll();
+		AppointmentService appointmentService = new AppointmentServiceImpl();
+		Map<String, AppointmentDTO> map1 = appointmentService.getAll();
 		System.out.println(map1);
 
 		MedicalFolderService medicalFolderService = new MedicalFolderServiceImpl();
