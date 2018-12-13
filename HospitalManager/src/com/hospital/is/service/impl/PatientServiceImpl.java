@@ -3,6 +3,7 @@ package com.hospital.is.service.impl;
 import java.util.HashMap;
 import java.util.Map;
 
+import com.hospital.is.StaticDatabase;
 import com.hospital.is.dao.PatientDao;
 import com.hospital.is.dao.impl.PatientDaoImpl;
 import com.hospital.is.entity.Patient;
@@ -38,17 +39,20 @@ public class PatientServiceImpl extends ServiceImpl<PatientDTO> implements Patie
 	}
 
 	@Override
-	public PatientDTO create(PatientDTO t) {
-		// TODO Auto-generated method stub
-		return super.create(t);
-	}
-
-	@Override
 	public PatientDTO update(PatientDTO t, long id) {
-		// TODO Auto-generated method stub
-		return super.update(t, id);
+
+		Patient patient = patientDao.getById(id);
+
+		PatientDTO patientDTO = converter.toDTO(patient);
+
+		patientDTO.setFirstName(t.getFirstName());
+		patientDTO.setLastName(t.getLastName());
+		patientDTO.setFirstName(t.getFirstName());
+		patientDTO.setAddress(t.getAddress());
+		patientDTO.setBirthDate(t.getBirthDate());
+		patientDTO.setPhone(t.getPhone());
+
+		return patientDTO;
 	}
 
-	
-	
 }
