@@ -2,8 +2,8 @@ package com.hospital.is.service.impl;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Map.Entry;
 
-import com.hospital.is.StaticDatabase;
 import com.hospital.is.dao.PatientDao;
 import com.hospital.is.dao.impl.PatientDaoImpl;
 import com.hospital.is.entity.Patient;
@@ -39,20 +39,12 @@ public class PatientServiceImpl extends ServiceImpl<PatientDTO> implements Patie
 	}
 
 	@Override
-	public PatientDTO update(PatientDTO t, long id) {
+	public PatientDTO update(PatientDTO patient, long id) {
 
-		Patient patient = patientDao.getById(id);
-
-		PatientDTO patientDTO = converter.toDTO(patient);
-
-		patientDTO.setFirstName(t.getFirstName());
-		patientDTO.setLastName(t.getLastName());
-		patientDTO.setFirstName(t.getFirstName());
-		patientDTO.setAddress(t.getAddress());
-		patientDTO.setBirthDate(t.getBirthDate());
-		patientDTO.setPhone(t.getPhone());
-
-		return patientDTO;
+		for(Entry<Long, PatientDTO> entry : getAll().entrySet())
+			if(entry.getKey()==id)
+				entry.setValue(patient);
+		return patient;
 	}
 
 }

@@ -18,7 +18,10 @@ public class Main {
 
 		PatientService patientService = new PatientServiceImpl();
 		Map<Long, PatientDTO> map = patientService.getAll();
-		PatientDTO id = patientService.getById(1);
+        PatientDTO patient = patientService.getById(1L);
+
+		System.out.println(patient);
+	PatientDTO id = patientService.getById(1);
 		System.out.println(id);
 		System.out.println(map);
 
