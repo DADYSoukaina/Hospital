@@ -61,7 +61,7 @@ public class MedicalFolderDTO {
 	 */
 	@Override
 	public String toString() {
-		return "MedicalFolder [diseaseMap=" + diseaseMap + "]";
+		return "MedicalFolder [diseaseMap=" + getDiseaseMap() + ",appointmentMap= "+ getAppointmentMap()+",prescriptionMap="+getPrescriptionMap()+"]";
 	}
 	
 	
