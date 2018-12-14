@@ -12,6 +12,31 @@ import com.hospital.is.entity.Patient;
 import com.hospital.is.entity.Prescription;
 
 public class StaticDatabase {
+	private static Map<Long, Patient> patientMap = new HashMap<>();
+
+	static {
+
+		Patient patient = new Patient();
+
+		patient.setMedicalFolder(getMedicalFolderMap().get(1l));
+		patient.setFirstName("Code");
+		patient.setLastName("Burners");
+		patient.setAddress("30 rue soulaimane achaairi, 20500, Tetouan Maroc");
+		patient.setBirthDate("01/01/1970");
+		patient.setPhone("+212 6 66 77 88 99");
+		
+		Patient patient2 = new Patient();
+
+		patient2.setMedicalFolder(getMedicalFolderMap().get(2L));
+		patient2.setFirstName("chaam");
+		patient2.setLastName("guet");
+		patient2.setAddress("15 rue soulaimane achaairi, 20500, Tetouan Maroc");
+		patient2.setBirthDate("01/01/1970");
+		patient2.setPhone("+212 6 66 77 88 99");
+
+		patientMap.put(1L, patient);
+		patientMap.put(2L, patient2);
+	}
 
 	public static Map<Long, Object> getGenericMap(String key) {
 
@@ -107,28 +132,7 @@ public class StaticDatabase {
 	 */
 	public static Map<Long, Patient> getPatientMap() {
 
-		Map<Long, Patient> patientMap = new HashMap<>();
-
-		Patient patient = new Patient();
-
-		patient.setMedicalFolder(getMedicalFolderMap().get(1l));
-		patient.setFirstName("Code");
-		patient.setLastName("Burners");
-		patient.setAddress("30 rue soulaimane achaairi, 20500, Tetouan Maroc");
-		patient.setBirthDate("01/01/1970");
-		patient.setPhone("+212 6 66 77 88 99");
-		
-		Patient patient2 = new Patient();
-
-		patient2.setMedicalFolder(getMedicalFolderMap().get(2L));
-		patient2.setFirstName("chaam");
-		patient2.setLastName("guet");
-		patient2.setAddress("15 rue soulaimane achaairi, 20500, Tetouan Maroc");
-		patient2.setBirthDate("01/01/1970");
-		patient2.setPhone("+212 6 66 77 88 99");
-
-		patientMap.put(1L, patient);
-		patientMap.put(2L, patient2);
+	
 
 		return patientMap;
 	}
