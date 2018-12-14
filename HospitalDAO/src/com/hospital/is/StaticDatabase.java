@@ -13,6 +13,10 @@ import com.hospital.is.entity.Prescription;
 
 public class StaticDatabase {
 
+	private static Long patientIndex;
+
+	static Map<Long, Patient> patientMap = new HashMap<>();
+
 	public static Map<Long, Object> getGenericMap(String key) {
 
 		switch (key) {
@@ -107,8 +111,7 @@ public class StaticDatabase {
 	 */
 	public static Map<Long, Patient> getPatientMap() {
 
-		Map<Long, Patient> patientMap = new HashMap<>();
-
+//		this patients will be added on each call f this method
 		Patient patient = new Patient();
 
 		patient.setMedicalFolder(getMedicalFolderMap().get(1l));
@@ -127,10 +130,15 @@ public class StaticDatabase {
 		patient2.setBirthDate("01/01/1970");
 		patient2.setPhone("+212 6 66 77 88 99");
 
-		patientMap.put(1L, patient);
-		patientMap.put(2L, patient2);
+		addPatient(patient);
+		addPatient(patient2);
+		
 
 		return patientMap;
+	}
+	
+	public static void addPatient(Patient p) {
+		patientMap.put(++patientIndex,p);
 	}
 
 	public static Map<Long, Medication> getMedicationMap() {

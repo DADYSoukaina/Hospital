@@ -4,6 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.hospital.is.StaticDatabase;
 import com.hospital.is.dao.PatientDao;
 import com.hospital.is.dao.impl.PatientDaoImpl;
 import com.hospital.is.entity.Patient;
@@ -41,10 +42,18 @@ public class PatientServiceImpl extends ServiceImpl<PatientDTO> implements Patie
 	@Override
 	public PatientDTO update(PatientDTO patient, long id) {
 
-		for(Entry<Long, PatientDTO> entry : getAll().entrySet())
-			if(entry.getKey()==id)
+		for (Entry<Long, PatientDTO> entry : getAll().entrySet())
+			if (entry.getKey() == id)
 				entry.setValue(patient);
 		return patient;
+	}
+
+	@Override
+	public PatientDTO create(PatientDTO t) {
+		Patient k = converter.toEntity(t);
+
+		StaticDatabase.addPatient(k);
+		return t;
 	}
 
 }
