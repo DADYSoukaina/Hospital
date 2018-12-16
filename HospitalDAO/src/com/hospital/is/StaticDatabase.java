@@ -37,6 +37,7 @@ public class StaticDatabase {
 		patientMap.put(1L, patient);
 		patientMap.put(2L, patient2);
 	}
+	//test
 
 	public static Map<Long, Object> getGenericMap(String key) {
 
