@@ -152,7 +152,7 @@ public class StaticDatabase {
 
 		return medicationMap;
 	}
-
+//test
 	/**
 	 * @return the patientList
 	 */
