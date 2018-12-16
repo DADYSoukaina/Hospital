@@ -18,20 +18,21 @@ public class Main {
 
 		PatientService patientService = new PatientServiceImpl();
 		Map<Long, PatientDTO> map = patientService.getAll();
-        PatientDTO patient = patientService.getById(1L);
 
-		System.out.println(patient);
-	PatientDTO id = patientService.getById(1);
-		System.out.println(id);
-		System.out.println(map);
+	System.out.println(patientService.delete(1L));
 
-		AppointmentService appointmentService = new AppointmentServiceImpl();
-		Map<Long, AppointmentDTO> map1 = appointmentService.getAll();
-		System.out.println(map1);
-
-		MedicalFolderService medicalFolderService = new MedicalFolderServiceImpl();
-		Map<Long, MedicalFolderDTO> map2 = medicalFolderService.getAll();
-		System.out.println(map2);
+		
+//	PatientDTO id = patientService.getById(1);
+//		System.out.println(id);
+//		System.out.println(map);
+//
+//		AppointmentService appointmentService = new AppointmentServiceImpl();
+//		Map<Long, AppointmentDTO> map1 = appointmentService.getAll();
+//		System.out.println(map1);
+//
+//		MedicalFolderService medicalFolderService = new MedicalFolderServiceImpl();
+//		Map<Long, MedicalFolderDTO> map2 = medicalFolderService.getAll();
+//		System.out.println(map2);
 
 	}
 }

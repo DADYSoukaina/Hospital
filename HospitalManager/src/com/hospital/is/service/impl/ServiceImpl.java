@@ -28,5 +28,10 @@ public class ServiceImpl<T> implements Service<T> {
 		// TODO Auto-generated method stub
 		return null;
 	}
+	@Override
+	public Map<Long, T> delete( long id) {
+		// TODO Auto-generated method stub
+		return  null;
+	}
 
 }

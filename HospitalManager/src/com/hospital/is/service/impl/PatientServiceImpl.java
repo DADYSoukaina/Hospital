@@ -4,7 +4,10 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.Map.Entry;
 
+import com.hospital.is.StaticDatabase;
+import com.hospital.is.dao.MedicalFolderDao;
 import com.hospital.is.dao.PatientDao;
+import com.hospital.is.dao.impl.MedicalFolderImpl;
 import com.hospital.is.dao.impl.PatientDaoImpl;
 import com.hospital.is.entity.Patient;
 import com.hospital.is.model.PatientDTO;
@@ -14,6 +17,7 @@ import com.hospital.is.transformer.PatientConverter;
 public class PatientServiceImpl extends ServiceImpl<PatientDTO> implements PatientService {
 
 	PatientDao patientDao = new PatientDaoImpl();
+	MedicalFolderDao medicalFolderDao = new MedicalFolderImpl();
 
 	private PatientConverter converter = new PatientConverter();
 
@@ -40,11 +44,36 @@ public class PatientServiceImpl extends ServiceImpl<PatientDTO> implements Patie
 
 	@Override
 	public PatientDTO update(PatientDTO patient, long id) {
-
-		for(Entry<Long, PatientDTO> entry : getAll().entrySet())
-			if(entry.getKey()==id)
+		for (Entry<Long, PatientDTO> entry : getAll().entrySet())
+			if (entry.getKey() == id)
 				entry.setValue(patient);
 		return patient;
 	}
+
+	@Override
+	public Map<Long, PatientDTO> delete(long id) {
+		Map<Long, Patient> map = patientDao.getAll();
+			if (getById(id) != null) 
+				map.remove(id);
+	
+		return converter.toMapDTO(map);
+		
+	}
+//	
+//	@Override
+//	public PatientDTO create(PatientDTO patient) {
+//		Map<Long, Patient> patientMap =patientDao.getAll();
+//
+//
+//		patient.setMedicalFolder(medicalFolderDao.getAll());
+//		patient.setFirstName(patient.getFirstName());
+//		patient.setLastName(patient.getLastName());
+//		patient.setAddress(patient.getAddress());
+//		patient.setBirthDate(patient.getBirthDate());
+//		patient.setPhone(patient.getPhone());
+//
+//		patientMap.putAll(patient);
+//		return patient;
+//	}
 
 }

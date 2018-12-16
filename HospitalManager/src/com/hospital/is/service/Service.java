@@ -12,6 +12,10 @@ public interface Service<T> {
 
 	// put
 	T update(T t, long id);
+	//delete method
+
+	Map<Long ,T> delete( long id);
+
 
 	//	boolean delete(long id);
 }

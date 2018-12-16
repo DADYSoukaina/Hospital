@@ -40,5 +40,29 @@ public class PatientDaoImpl extends DaoImpl<Patient> implements PatientDao {
 				entry.setValue(patient);
 		return patient;
 	}
+	@Override
 
+	
+	public Map<Long, Patient> delete(long id) {
+		Map<Long, Patient> map = StaticDatabase.getPatientMap();
+			if (getById(id) != null) 
+				map.remove(id);
+				return map;
+	}
+	
+	@Override
+	public Patient create(Patient patient) {
+		Map<Long, Patient> patientMap = StaticDatabase.getPatientMap();
+
+
+		patient.setMedicalFolder(StaticDatabase.getMedicalFolderMap().get(2L));
+		patient.setFirstName(patient.getFirstName());
+		patient.setLastName(patient.getLastName());
+		patient.setAddress(patient.getAddress());
+		patient.setBirthDate(patient.getBirthDate());
+		patient.setPhone(patient.getPhone());
+
+		patientMap.put(1L, patient);
+		return patient;
+	}
 }

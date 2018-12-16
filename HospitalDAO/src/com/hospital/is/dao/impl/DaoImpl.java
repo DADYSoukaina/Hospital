@@ -29,7 +29,11 @@ public class DaoImpl<T> implements Dao<T> {
 		// TODO Auto-generated method stub
 		return null;
 	}
-	
+	@Override
+	public Map<Long,T> delete( long id) {
+		// TODO Auto-generated method stub
+		return null;
+	}
 	
 
 }
