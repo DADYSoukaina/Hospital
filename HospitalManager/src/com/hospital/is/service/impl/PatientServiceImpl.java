@@ -60,20 +60,11 @@ public class PatientServiceImpl extends ServiceImpl<PatientDTO> implements Patie
 		
 	}
 //	
-//	@Override
-//	public PatientDTO create(PatientDTO patient) {
-//		Map<Long, Patient> patientMap =patientDao.getAll();
-//
-//
-//		patient.setMedicalFolder(medicalFolderDao.getAll());
-//		patient.setFirstName(patient.getFirstName());
-//		patient.setLastName(patient.getLastName());
-//		patient.setAddress(patient.getAddress());
-//		patient.setBirthDate(patient.getBirthDate());
-//		patient.setPhone(patient.getPhone());
-//
-//		patientMap.putAll(patient);
-//		return patient;
-//	}
+	@Override
+	public PatientDTO create(PatientDTO patient) {
+		Map<Long, Patient> patientMap =patientDao.getAll();
+		patientMap.put(3L,converter.toEntity(patient));
+		return patient;
+	}
 
 }

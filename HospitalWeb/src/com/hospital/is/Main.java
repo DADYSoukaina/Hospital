@@ -18,8 +18,13 @@ public class Main {
 
 		PatientService patientService = new PatientServiceImpl();
 		Map<Long, PatientDTO> map = patientService.getAll();
+//		PatientDTO patient=new PatientDTO();
+//		patient.setFirstName("test");
+//		patient.setLastName("tessst");
+
 
 	System.out.println(patientService.delete(1L));
+	System.out.println(map);
 
 		
 //	PatientDTO id = patientService.getById(1);

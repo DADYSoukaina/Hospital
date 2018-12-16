@@ -53,16 +53,7 @@ public class PatientDaoImpl extends DaoImpl<Patient> implements PatientDao {
 	@Override
 	public Patient create(Patient patient) {
 		Map<Long, Patient> patientMap = StaticDatabase.getPatientMap();
-
-
-		patient.setMedicalFolder(StaticDatabase.getMedicalFolderMap().get(2L));
-		patient.setFirstName(patient.getFirstName());
-		patient.setLastName(patient.getLastName());
-		patient.setAddress(patient.getAddress());
-		patient.setBirthDate(patient.getBirthDate());
-		patient.setPhone(patient.getPhone());
-
-		patientMap.put(1L, patient);
+		patientMap.put(3L, patient);
 		return patient;
 	}
 }
