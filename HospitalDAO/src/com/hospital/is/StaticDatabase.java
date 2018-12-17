@@ -24,7 +24,7 @@ public class StaticDatabase {
 		patient.setAddress("30 rue soulaimane achaairi, 20500, Tetouan Maroc");
 		patient.setBirthDate("01/01/1970");
 		patient.setPhone("+212 6 66 77 88 99");
-		
+
 		Patient patient2 = new Patient();
 
 		patient2.setMedicalFolder(getMedicalFolderMap().get(2L));
@@ -131,9 +131,7 @@ public class StaticDatabase {
 	 * @return the patientList
 	 */
 	public static Map<Long, Patient> getPatientMap() {
-
-	
-
+		System.out.println(patientMap.size());
 		return patientMap;
 	}
 
@@ -152,6 +150,7 @@ public class StaticDatabase {
 
 		return medicationMap;
 	}
+
 //test
 	/**
 	 * @return the patientList

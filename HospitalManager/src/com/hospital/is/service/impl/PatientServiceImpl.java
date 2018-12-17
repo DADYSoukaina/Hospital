@@ -30,7 +30,7 @@ public class PatientServiceImpl extends ServiceImpl<PatientDTO> implements Patie
 
 		result.putAll(converter.toMapDTO(map));
 
-		result.put(1L, converter.toDTO(map.get(1L)));
+//		result.put(1L, converter.toDTO(map.get(1L)));
 
 		return result;
 	}
@@ -52,19 +52,13 @@ public class PatientServiceImpl extends ServiceImpl<PatientDTO> implements Patie
 
 	@Override
 	public Map<Long, PatientDTO> delete(long id) {
-		Map<Long, Patient> map = patientDao.getAll();
-			if (getById(id) != null) 
-				map.remove(id);
-	
-		return converter.toMapDTO(map);
-		
+		return converter.toMapDTO(patientDao.delete(id));
 	}
+
 //	
 	@Override
 	public PatientDTO create(PatientDTO patient) {
-		Map<Long, Patient> patientMap =patientDao.getAll();
-		patientMap.put(3L,converter.toEntity(patient));
-		return patient;
+		return(converter.toDTO(patientDao.create(converter.toEntity(patient))));
 	}
 
 }
