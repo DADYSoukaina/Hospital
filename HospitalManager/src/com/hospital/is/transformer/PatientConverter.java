@@ -8,7 +8,6 @@ public class PatientConverter extends AbstractConverter<Patient,PatientDTO>{
 	
 	public PatientDTO toDTO(Patient patient) {
 		PatientDTO dto = new PatientDTO();
-
 		dto.setFirstName(patient.getFirstName());
 		dto.setLastName(patient.getLastName());
 		dto.setAddress(patient.getAddress());

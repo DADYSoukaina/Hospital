@@ -19,7 +19,7 @@ public class PatientDaoImpl extends DaoImpl<Patient> implements PatientDao {
 
 		result.putAll(map);
 
-		result.put(1L, map.get(1L));
+//		result.put(1L, map.get(1L));
 
 		return result;
 	}

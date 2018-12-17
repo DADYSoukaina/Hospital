@@ -28,4 +28,22 @@ public class MedicalFolderServiceImpl extends ServiceImpl<MedicalFolderDTO> impl
 		return result;
 	}
 
+	@Override
+	public MedicalFolderDTO create(MedicalFolderDTO t) {
+		// TODO Auto-generated method stub
+		return super.create(t);
+	}
+
+	@Override
+	public MedicalFolderDTO getById(long id) {
+		// TODO Auto-generated method stub
+		return super.getById(id);
+	}
+
+	@Override
+	public MedicalFolderDTO update(MedicalFolderDTO t, long id) {
+		// TODO Auto-generated method stub
+		return super.update(t, id);
+	}
+
 }

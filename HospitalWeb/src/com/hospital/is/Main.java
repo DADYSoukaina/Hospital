@@ -17,16 +17,14 @@ public class Main {
 	public static void main(String[] args) {
 
 		PatientService patientService = new PatientServiceImpl();
-		Map<Long, PatientDTO> map = patientService.getAll();
-//		PatientDTO patient=new PatientDTO();
-//		patient.setFirstName("test");
-//		patient.setLastName("tessst");
+		PatientDTO patient=new PatientDTO();
+		patient.setFirstName("test");
+		patient.setLastName("tessst");
 
+//		System.out.println(patientService.getAll().size());
+		System.out.println( patientService.create(patient));
+		patientService.getAll();
 
-	System.out.println(patientService.delete(1L));
-	System.out.println(map);
-
-		
 //	PatientDTO id = patientService.getById(1);
 //		System.out.println(id);
 //		System.out.println(map);
